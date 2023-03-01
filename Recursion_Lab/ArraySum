@@ -1,0 +1,21 @@
+/*
+ * @Recursion lab
+ * @author Estifanos K
+ */
+
+public class ArraySum {
+      
+	//recursive method to calculate sum of an array
+	public int sumOfArray (Integer[] a,int index) {
+		// base case
+		int sum = 0;
+		if( index == 0 ) {
+			sum += a[index];
+		}
+		else {
+			sum += a[index] + sumOfArray(a, index-1); // reduced problem
+		}
+		return sum;
+
+	}
+}
